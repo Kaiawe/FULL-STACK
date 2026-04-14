@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Adivinhação - Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="corpo-pagina">
+
+    <nav id="menu-principal">
+        <a href="Lab1.html" class="link-menu">Página Inicial</a>
+        <a href="Lab1ProjectsPage.html" class="link-menu">Projetos</a>
+    </nav>
+
+    <div id="conteudo">
+        <h1>Jogo da Adivinhação</h1>
+        <p>Adivinha o número de 0 a 99!</p>
+        
+        <input type="number" id="palpite" placeholder="Digita um número" min="0" max="99">
+        <button onclick="verificarAdivinhacao()">Tentar</button>
+        
+        <p id="mensagem"></p>
+    </div>
+
+    <script>
+        // Gera um número aleatório entre 0 e 99 ao carregar a página
+        // Math.random() gera entre [0, 1) e Math.floor arredonda para baixo
+        const numeroSecreto = Math.floor(Math.random() * 100);
+
+        function verificarAdivinhacao() {
+            // Pegar no valor digitado pelo utilizador
+            let palpite = parseInt(document.getElementById("palpite").value);
+            let mensagem = document.getElementById("mensagem");
+
+            // Estrutura de condição if para verificar se é maior, menor ou igual
+            if (palpite === numeroSecreto) {
+                mensagem.innerHTML = "Parabéns! Acertaste!";
+                mensagem.style.color = "green";
+                // Restaura a cor de fundo original caso ganhe
+                document.getElementById("corpo-pagina").style.setProperty("background-color", "#f4f4f9");
+            } else {
+                if (palpite > numeroSecreto) {
+                    mensagem.innerHTML = "O número é menor. Tenta de novo!";
+                } else {
+                    mensagem.innerHTML = "O número é maior. Tenta de novo!";
+                }
+                mensagem.style.color = "white";
+                
+                // Altera a cor de fundo para vermelho caso o utilizador erre (Lab 3)
+                document.getElementById("corpo-pagina").style.setProperty("background-color", "red");
+            }
+        }
+    </script>
+</body>
+</html>

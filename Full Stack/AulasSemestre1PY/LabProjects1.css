@@ -1,0 +1,43 @@
+.tabela-projetos {
+    margin: 40px auto;
+    border-collapse: collapse;
+    width: 70%;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+.tabela-projetos th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+    padding: 18px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.tabela-projetos td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #444;
+    font-size: 16px;
+}
+.tabela-projetos tbody tr:hover {
+    background-color: #f9fdf9;
+    transition: background-color 0.3s ease;
+}
+.tabela-projetos td a {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(33, 150, 243, 0.3);
+    transition: all 0.3s ease;
+}
+.tabela-projetos td a:hover {
+    background-color: #0b7dda;
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(33, 150, 243, 0.4);
+}

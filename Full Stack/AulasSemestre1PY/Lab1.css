@@ -1,0 +1,55 @@
+/* style.css */
+
+/* Seletor de tag: Aplica cor de fundo e centraliza o texto na página (Lab 3 e 4) */
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    text-align: center; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Seletor de ID: Estiliza o menu de navegação */
+#menu-principal {
+    background-color: #333;
+    padding: 15px;
+}
+
+/* Seletor de classe e pseudo-classe: Estiliza os links do menu e adiciona efeito hover (Lab 2) */
+.link-menu {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.link-menu:hover {
+    color: #4CAF50; /* Muda de cor quando o rato passa por cima */
+}
+
+/* Seletor de classe: Estiliza a tabela de projetos */
+.tabela-projetos {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 60%;
+    background-color: white;
+}
+
+.tabela-projetos th, .tabela-projetos td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+.tabela-projetos th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Seletor de ID: Centraliza a área principal de conteúdo */
+#conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
